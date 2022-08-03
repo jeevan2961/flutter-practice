@@ -20,13 +20,11 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: Center(
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              primary: Colors.blue,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-            ),
-            child: const Text("click me"),)
+          child: ElevatedButton.icon(
+            onPressed: () {}, 
+            icon: const Icon(Icons.mail), 
+            label: const Text("Mail me"),
+            )
           ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
