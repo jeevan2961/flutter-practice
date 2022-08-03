@@ -20,15 +20,8 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: const Center(
-          child:Text(
-            "Hello Dude!",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.grey,
-              fontFamily: 'IndieFlower'),
-            )
+          child:Image(
+            image: NetworkImage('https://images.unsplash.com/photo-1553923063-99176de11c53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'))
           ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
