@@ -12,6 +12,6 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Text("Loading screen"),
-    )
+    );
   }
 }
