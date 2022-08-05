@@ -5,6 +5,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() {
   runApp(const MaterialApp (home: QuoteList()));
@@ -19,11 +20,12 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
 
-  List<String> quotes = [
-    "The purpose of our lives is to be happy." ,
-    "Life is what happens when you're busy making other plans." ,
-    "Get busy living or get busy dying."
+  List<Quote> quotes = [
+    Quote(author:'jeevan',text:"The purpose of our lives is to be happy."),
+    Quote(author:'naveen',text:"Life is what happens when you're busy making other plans."),
+    Quote(author:'satish',text:"Get busy living or get busy dying."),    
   ];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +36,8 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList()
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList()
       ),
     );
   }
