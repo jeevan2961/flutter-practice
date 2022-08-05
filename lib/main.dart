@@ -25,6 +25,35 @@ class _QuoteListState extends State<QuoteList> {
     Quote(author:'naveen',text:"Life is what happens when you're busy making other plans."),
     Quote(author:'satish',text:"Get busy living or get busy dying."),    
   ];
+
+  Widget quotetemplate(quote){
+    return Card(
+      margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              quote.text,
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey[600] 
+                ),
+            ),
+            SizedBox(height: 6),
+            Text(
+              quote.author,
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[800]
+                ),
+            )
+          ]
+          ),
+      ),
+      );
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -37,7 +66,7 @@ class _QuoteListState extends State<QuoteList> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList()
+        children: quotes.map((quote) => quotetemplate(quote)).toList()
       ),
     );
   }
